@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vote-config
+  namespace: voting-app
+data:
+  app.name: "vote-service"
+  redis.host: "redis.voting-app.svc.cluster.local"
+  redis.port: "6379"
+  result.service.url: "http://result.voting-app.svc.cluster.local:80"
+  log.level: "INFO"
